@@ -1,0 +1,684 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* about.css */
+
+/* Container principal */
+.about-container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: white;
+}
+
+/* Título */
+.about-title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: #4a5568; /* Cor cinza */
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Parágrafos */
+.about-paragraph {
+    max-width: 42rem; /* Aproximadamente 672px */
+    margin-left: auto;
+    margin-right: auto;
+    color: #4a5568; /* Cor cinza */
+    margin-bottom: 1rem;
+}
+
+/* classes.css */
+
+/* Container principal */
+.classes-container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: #f7fafc; /* Cor de fundo cinza claro */
+}
+
+/* Título */
+.classes-title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: #4a5568; /* Cor cinza */
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Tabela container */
+.classes-table-container {
+    max-width: 72rem; /* Aproximadamente 1152px */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilo da tabela */
+.classes-table {
+    min-width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #e2e8f0; /* Cor cinza claro para a borda */
+}
+
+/* Cabeçalho da tabela */
+.classes-table th {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+    background-color: #edf2f7; /* Cor de fundo cinza claro */
+}
+
+/* Corpo da tabela */
+.classes-table td {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border: 1px solid #e2e8f0;
+}
+
+/* Linha de tabela com hover */
+.classes-table tr:hover {
+    background-color: #f7fafc; /* Cor de fundo ao passar o mouse */
+}
+
+/* Imagem da classe */
+.classes-image {
+    width: 8rem;
+    height: 5rem;
+    object-fit: cover;
+}
+
+/* Botão Saiba Mais */
+.classes-button {
+    background-color: #6b7280; /* Cor de fundo cinza escuro */
+    color: black;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.375rem;
+}
+
+.classes-button:hover {
+    background-color: #4b5563; /* Cor de fundo ao passar o mouse */
+}
+
+/* coaches.css */
+
+/* Container principal */
+.coaches-container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: #f7fafc; /* Cor de fundo cinza claro */
+}
+
+/* Título */
+.coaches-title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: #4a5568; /* Cor cinza */
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Botão para adicionar coach */
+.coaches-add-button {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: #3182ce; /* Cor de fundo azul */
+    color: white;
+    font-weight: 600;
+    border-radius: 0.5rem;
+}
+
+/* Botão hover */
+.coaches-add-button:hover {
+    background-color: #2b6cb0; /* Cor de fundo azul escuro no hover */
+}
+
+/* Container de coaches */
+.coaches-grid {
+    max-width: 72rem; /* Aproximadamente 1152px */
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .coaches-grid {
+        grid-template-columns: repeat(3, 1fr); /* Três colunas em dispositivos maiores */
+    }
+}
+
+/* Estilo de cada card de treinador */
+.coach-card {
+    background-color: white;
+    border: 1px solid #e2e8f0; /* Cor de borda cinza claro */
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Imagem do coach */
+.coach-image {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+/* Nome do coach */
+.coach-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* Detalhes do coach */
+.coach-details {
+    color: #4a5568; /* Cor cinza para o texto */
+}
+
+/* Contact.css */
+
+.contact-container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: #f7fafc;
+}
+
+.contact-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2d3748;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contact-form-container {
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .contact-form-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    display: block;
+    color: #4a5568;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.375rem;
+}
+
+.form-textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    background-color: #6b7280;
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #4b5563;
+}
+
+.contact-info {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+}
+
+.map-container {
+    margin-top: 2.5rem;
+}
+
+.map-container iframe {
+    height: 16rem;
+    width: 100%;
+    border: 0;
+}
+
+/* Footer.css */
+
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Home.css */
+
+/* Estilos para o Banner */
+.banner {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.banner-img {
+    width: 100%;
+    height: 24rem; /* Ajuste a altura conforme necessário */
+    object-fit: cover;
+    opacity: 0.3;
+}
+
+.banner-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.banner-text h1 {
+    font-size: 3rem; /* Ajuste o tamanho da fonte conforme necessário */
+    font-weight: bold;
+}
+
+.banner-text p {
+    margin-top: 0.5rem;
+    font-size: 1.125rem;
+}
+
+.banner-button {
+    margin-top: 1rem;
+    display: inline-block;
+    background-color: #6B7280; /* Cor de fundo cinza */
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.375rem;
+    transition: background-color 0.3s ease;
+}
+
+.banner-button:hover {
+    background-color: #4B5563; /* Cor de fundo cinza mais escuro */
+}
+
+/* Seção "Dicas de Saúde" */
+.dicas-saude {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: white;
+}
+
+.dicas-saude h2 {
+    font-size: 1.875rem; /* Tamanho da fonte */
+    font-weight: bold;
+    color: #1F2937; /* Cor cinza escuro */
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.card {
+    padding: 1.5rem;
+    border: 1px solid #D1D5DB; /* Borda cinza clara */
+    border-radius: 0.375rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    font-size: 1.25rem; /* Tamanho da fonte */
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    color: #4B5563; /* Cor cinza escuro */
+}
+
+/* Estilo para o vídeo */
+.video-section {
+    margin-top: 3rem;
+}
+
+.video-section h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.video-section iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Modal.css */
+
+/* Estilos para o modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo com opacidade */
+}
+
+.modal-content-container {
+    background-color: white;
+    border-radius: 0.375rem; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    position: relative;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    color: #4B5563; /* Cor de texto */
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.modal-close-btn:hover {
+    color: #1F2937; /* Cor mais escura ao passar o mouse */
+}
+
+/* Navbar.css */
+
+/* Estilo para o container do navbar */
+.navbar {
+    background-color: #000;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo para o título da navbar */
+.navbar-title {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Estilo para a lista de links */
+.navbar-links {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Estilo para os links */
+.navbar-link {
+    color: white;
+    text-decoration: none;
+}
+
+/* Efeito de hover para os links */
+.navbar-link:hover {
+    color: #63b3ed; /* Azul mais claro */
+}
+
+/* Estilo para o botão "Adicionar Aluno" */
+.navbar-button {
+    background-color: white;
+    color: #3182ce; /* Azul */
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+}
+
+.navbar-button:hover {
+    background-color: #2b6cb0; /* Azul mais escuro */
+    color: white;
+}
+
+/* StudentList.css */
+
+/* Estilos gerais para a lista de usuários */
+.user-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para o título de cada item de usuário */
+.user-item strong {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Estilo para o texto (email, idade, telefone) */
+.user-item p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Estilo do botão para alternar a visibilidade dos exercícios */
+.toggle-exercise-button {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.toggle-exercise-button:hover {
+    background-color: #45a049; /* Verde mais escuro */
+}
+
+/* Estilo para a lista de exercícios */
+.exercise-list {
+    margin-top: 10px;
+    padding-left: 20px;
+    list-style-type: disc;
+    color: #333;
+}
+
+/* Estilo para mensagens de "Nenhum exercício aplicado" */
+.exercise-list li {
+    color: #777;
+}
+
+/* Estilo para a mensagem de "Nenhum usuário cadastrado" */
+p {
+    font-style: italic;
+    color: #888;
+}
+
+/* Geral */
+.exercise-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.exercise-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+input:focus, select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+select[multiple] {
+    height: 150px;
+}
+
+/* Mensagens de erro */
+.error-message {
+    color: #f44336;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Botões */
+.toggle-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.toggle-button:hover {
+    background-color: #45a049;
+}
+
+.toggle-button:active {
+    background-color: #388e3c;
+}
+
+/* Estilo de layout */
+@media (max-width: 768px) {
+    .exercise-form {
+        padding: 15px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input, select {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .toggle-button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Estilo para a lista de coaches */
+.coach-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* Estilo para o container de seleção */
+.coach-select-container {
+    position: relative;
+}
+
+.coach-select::after {
+    content: '▼';
+    font-size: 12px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+}
+
+/* Estilo de foco para o select */
+.coach-select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Estilo de erros */
+.coach-error-message {
+    color: #f44336;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.classes-table td {
+    word-wrap: break-word;
+    max-width: 300px;
+}
