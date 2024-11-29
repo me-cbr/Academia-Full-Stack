@@ -23,17 +23,14 @@ function Home() {
             <div className="dicas-saude bg-white">
                 <h2>Dicas de Saúde</h2>
                 <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {/* Card 1 */}
                     <div className="card">
                         <h3>Mantenha-se Hidratado</h3>
                         <p>Beber água regularmente é fundamental para manter a saúde e o desempenho físico.</p>
                     </div>
-                    {/* Card 2 */}
                     <div className="card">
                         <h3>Alimente-se Bem</h3>
                         <p>Uma dieta equilibrada, rica em frutas e vegetais, é essencial para um bom funcionamento do corpo.</p>
                     </div>
-                    {/* Card 3 */}
                     <div className="card">
                         <h3>Exercite-se Regularmente</h3>
                         <p>Realizar atividades físicas de forma regular melhora a saúde cardiovascular e aumenta a energia.</p>
@@ -41,7 +38,6 @@ function Home() {
                 </div>
             </div>
 
-            {/* Espaço para o vídeo */}
             <div className="video-section mt-12">
                 <h2>Confira Nosso Vídeo</h2>
                 <div className="flex justify-center">

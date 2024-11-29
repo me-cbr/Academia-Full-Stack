@@ -14,7 +14,6 @@ function ExerciseForm() {
     const [coaches, setCoaches] = useState([]);
     const [availableClasses, setAvailableClasses] = useState([]);
 
-    // Fetch CSRF token
     useEffect(() => {
         const fetchCsrfToken = async () => {
             try {
@@ -27,7 +26,6 @@ function ExerciseForm() {
         fetchCsrfToken();
     }, []);
 
-    // Fetch coaches and classes
     useEffect(() => {
         const fetchCoachesAndClasses = async () => {
             try {
@@ -48,7 +46,7 @@ function ExerciseForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
-        setSuccessMessage(''); // Limpa as mensagens anteriores
+        setSuccessMessage('');
 
         if (!exerciseName || !reps || !sessions || !coachName.length || !classes) {
             setError('Todos os campos são obrigatórios!');
@@ -77,10 +75,10 @@ function ExerciseForm() {
             setSessions('');
             setCoachName([]);
             setClasses('');
-            setSuccessMessage('Exercício adicionado com sucesso!'); // Mensagem de sucesso
+            setSuccessMessage('Exercício adicionado com sucesso!');
         } catch (err) {
             console.error('Erro ao enviar exercício:', err);
-            setError('Erro ao adicionar exercício'); // Mensagem de erro
+            setError('Erro ao adicionar exercício');
         }
     };
 
@@ -154,7 +152,7 @@ function ExerciseForm() {
             </div>
 
             {error && <p className="error-message">{error}</p>}
-            {successMessage && <p className="success-message">{successMessage}</p>} {/* Exibe mensagem de sucesso */}
+            {successMessage && <p className="success-message">{successMessage}</p>}
             <button type="submit" className="toggle-button">Adicionar Exercício</button>
         </form>
     );

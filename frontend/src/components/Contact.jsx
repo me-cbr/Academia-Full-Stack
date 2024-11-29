@@ -10,13 +10,12 @@ function Contact() {
   });
   const [csrfToken, setCsrfToken] = useState('');
 
-  // Pega o token CSRF assim que o componente for montado
   useEffect(() => {
     const fetchCsrfToken = async () => {
       try {
         const response = await fetch('http://127.0.0.1:8000/get-csrf-token/');
         const data = await response.json();
-        setCsrfToken(data.csrfToken); // Armazena o token CSRF
+        setCsrfToken(data.csrfToken);
       } catch (error) {
         console.error('Erro ao obter CSRF token:', error);
       }
@@ -40,7 +39,7 @@ function Contact() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'X-CSRFToken': csrfToken, // Envia o token CSRF no cabeçalho
+          'X-CSRFToken': csrfToken,
         },
         body: JSON.stringify(formData)
       });
@@ -50,7 +49,7 @@ function Contact() {
       }
 
       const result = await response.json();
-      alert(result.message);  // Exibe a mensagem de sucesso ou erro
+      alert(result.message);
     } catch (error) {
       console.error('Error:', error);
       alert('Falha ao enviar a mensagem');
@@ -119,7 +118,6 @@ function Contact() {
         </div>
       </div>
       <div className="map-container">
-        {/* Integrar Google Maps aqui */}
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.224589634198!2d-122.41941578468153!3d37.77492927975967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809a49f2f0f3%3A0x165b3be4ec8e9b54!2sAcademia%20Exemplo!5e0!3m2!1spt-BR!2sbr!4v1631234567890!5m2!1spt-BR!2sbr"
           title="Academia Exemplo"

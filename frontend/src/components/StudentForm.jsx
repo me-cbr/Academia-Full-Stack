@@ -4,7 +4,6 @@ import axios from 'axios';
 function StudentForm({ handleInputChange, handleAddStudent, newStudent }) {
   const [csrfToken, setCsrfToken] = useState('');
 
-  // Effect para buscar o token CSRF quando o componente for montado
   useEffect(() => {
     const fetchCsrfToken = async () => {
       try {
@@ -21,7 +20,6 @@ function StudentForm({ handleInputChange, handleAddStudent, newStudent }) {
     fetchCsrfToken();
   }, []);
 
-  // Função para adicionar aluno
   const handleAddStudentWithCsrf = async () => {
     try {
       const response = await axios.post(
@@ -30,12 +28,12 @@ function StudentForm({ handleInputChange, handleAddStudent, newStudent }) {
         {
           headers: {
             'Content-Type': 'application/json',
-            'X-CSRFToken': csrfToken, // Envia o token CSRF no cabeçalho
+            'X-CSRFToken': csrfToken,
           },
         }
       );
       console.log('Aluno adicionado com sucesso:', response.data);
-      handleAddStudent(); // Atualiza a lista de alunos ou limpa o formulário
+      handleAddStudent();
     } catch (error) {
       console.error('Erro ao adicionar aluno:', error.response?.data || error.message);
     }

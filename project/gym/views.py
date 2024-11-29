@@ -53,7 +53,6 @@ class ClassesList(APIView):
 
 
 class ExerciseCreateListView(APIView):
-    # Método POST para criar um novo exercício
     def post(self, request, *args, **kwargs):
         serializer = ExerciseSerializer(data=request.data)
         if serializer.is_valid():
@@ -61,10 +60,9 @@ class ExerciseCreateListView(APIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    # Método GET para listar os exercícios de um aluno específico
     def get(self, request, students_id):
         exercises = Exercises.objects.filter(
-            students_id=students_id)  # A consulta foi corrigida para retornar múltiplos exercícios
+            students_id=students_id)
         serializer = ExerciseSerializer(exercises, many=True)
         return Response(serializer.data)
 
